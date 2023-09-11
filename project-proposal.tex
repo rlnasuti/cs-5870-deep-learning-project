@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{aaai24}
+
+\title{Utilizing Large Language Models as Interactive Dungeon Masters in Digital Role-playing Games}
+\author{Robert Nasuti}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\raggedbottom
+\begin{abstract}
+This proposal introduces an innovative approach to enhancing digital role-playing experiences by leveraging a state-of-the-art Large Language Model (LLM) as a dynamic and interactive dungeon master. By combining the narrative capabilities of the LLM with a custom-built framework, this project seeks to autonomously guide players through a pre-defined campaign while ensuring an immersive and adaptive storytelling experience. The integration of LLMs in such interactive environments not only augments the digital gaming realm but also showcases the broader potential of language models in creating adaptive and responsive AI systems.
+\end{abstract}
+
+\section{Introduction}
+Digital role-playing games (RPGs) have been a cornerstone of the gaming industry for decades, offering players immersive worlds where they can embark on epic quests, battle formidable foes, and craft intricate narratives. Central to many RPGs, particularly tabletop variants like Dungeons \& Dragons, is the role of the dungeon master (DM). The DM crafts the world, drives the narrative, and adapts to players' decisions, ensuring a unique and dynamic storytelling experience. Recent advances in artificial intelligence, particularly Large Language Models (LLMs), have opened doors to simulate intricate human behaviors. For instance, generative agents have been proposed as computational entities that can emulate day-to-day human activities with a focus on believability \cite{Park2023GenerativeAI}. Additionally, LLMs have been utilized to explore complex human-driven interactions in simulations \cite{Junprung2023ExploringTI}. In the context of digital RPGs, there exists an opportunity to harness these LLM capabilities to emulate a dynamic and creative DM. Automating this role presents a significant challenge due to its inherent complexity and the need for adaptability. However, with the rise of LLMs, there's potential to capture some of the dynamism and creativity of a human DM, opening the door to new interactive gaming experiences.
+
+\section{Background}
+Interactive digital storytelling has been a focus of research for over a quarter-century, with works by Peinado and Gervás \cite{Peinado2007AutomaticDO} and Smed \cite{Smed2014InteractiveSA} exploring its potential in shaping computer games and other applications. With advancements in technology, new avenues for immersive narrative experiences have emerged. With the advent of Large Language Models (LLMs), there's potential to push these boundaries even further. LLMs, like the models powering ChatGPT, are renowned for their capabilities in generating human-like text, offering a promising tool for interactive storytelling. Foundational works in automated storytelling, combined with recent advances in LLMs, lay the groundwork for the explorations proposed in this project.
+
+\section{Objective}
+\begin{itemize}
+    \item To implement an LLM as a dungeon master that can guide players through a pre-defined campaign.
+    \item To explore the ability of the LLM to dynamically adapt the narrative based on player interactions and decisions.
+\end{itemize}
+
+\section{Methodology}
+\begin{itemize}
+    \item \textbf{Framework Development:} The initial framework, developed to harness GPT's function calling capabilities, will be enhanced using the "LangChain" library. LangChain, specifically designed for applications powered by language models, offers both data-aware and agentic functionalities. Its modular components and structured chains make it ideal for this project, simplifying the development process while ensuring flexibility.
+    \item \textbf{Campaign Integration:} Dungeons \& Dragons campaigns often rely on pre-compiled sourcebooks, providing structure while maintaining adaptability. This framework will equip the LLM with the capability to track player and NPC interactions, ensuring continuity in the game narrative.
+    \item \textbf{Interaction Dynamics:} The LLM dungeon master is designed to offer players substantial agency within the game's narrative. From managing combat scenarios to facilitating intricate player-NPC interactions, the LLM-DM ensures a seamless and dynamic gameplay experience.
+\end{itemize}
+
+\section{Potential Challenges}
+
+The endeavor to integrate a Large Language Model (LLM) as an interactive dungeon master in digital role-playing games, while promising, comes with its own set of challenges:
+
+\begin{itemize}
+\item \textbf{LLM Hallucinations}: One of the known issues with LLMs is the potential for generating "hallucinations" or outputs that might be factually incorrect or inconsistent with the game's lore. Ensuring the generated content aligns with the game's narrative and rules can be a significant challenge.
+\item \textbf{Context Window Limitation}: GPT-4 has a token limit of 8k for its context window. This means that if a game session's interactions and descriptions exceed this limit, the LLM might lose track of earlier events, potentially affecting the consistency and quality of the narrative.
+\item \textbf{Financial Constraints}: The continuous interaction with the OpenAI API can be costly. Being a project undertaken by a graduate student, there are inherent budget limitations that might affect the scalability and frequency of testing and iterations.
+\item \textbf{Function Calling Limitation}: Currently, function calling capabilities, a critical feature for this project, are limited to models provided by OpenAI. This restricts the usage of open-source alternatives like Falcon and Llama-2, potentially affecting the project's scalability and adaptability in the future.
+\item \textbf{Adaptability to Player Choices}: While LLMs are adept at generating human-like text, predicting and adapting to an infinite array of player choices in real-time can be challenging. Striking a balance between adhering to the campaign's structure and allowing player agency might require iterative refinements.
+\item \textbf{User Interface Development}: Creating an intuitive and user-friendly interface for interaction is crucial for the project's success. Leveraging the "Chainlit" library is the current plan for developing this UI. However, any potential limitations or challenges faced with this library could impact the ease of use and overall experience for users.
+\end{itemize}
+
+\section{Significance in the Context of Deep Learning}
+In deep learning, projects often involve either creating or interacting with advanced models. This project focuses on the latter, leveraging established Large Language Models like GPT-3.5 and GPT-4. Harnessing pre-trained models allows for rapid prototyping and deployment, while also benefiting from their broad training data and generalization capabilities.
+
+Advantages of leveraging pre-trained models include:
+
+\begin{itemize}
+\item Time Efficiency: Bypassing the extensive requirements of training deep models from scratch.
+\item Robustness: Benefiting from diverse training data, ensuring dynamic and rich storytelling.
+\item Cost-effectiveness: Avoiding the high computational costs of fresh model training.
+\end{itemize}
+
+LLMs like GPT-3.5 and GPT-4 showcase the power of deep learning. Their ability to generate human-like text, understand context, and adapt to nuanced requirements signifies the progress made in deep learning. This project explores the potential of LLMs beyond text generation: crafting narratives, adapting to user input, and facilitating immersive experiences. It underscores the vast possibilities deep learning offers across various domains.
+
+\section{Expected Outcomes and Evaluation}
+
+\subsection{Expected Outcomes}
+
+The primary objective is for the LLM to serve as a dynamic dungeon master in the "Curse of Strahd" campaign's first chapter \cite{Perkins2023CurseOfStrahd}. Anticipated outcomes include:
+
+\begin{itemize}
+\item Effective navigation and description of the chapter's environment and events.
+\item Dynamic narrative adaptation based on player decisions.
+\item Persistent recall of player and NPC interactions, shaping the evolving story.
+\item Integration of core RPG mechanics into the narrative.
+\end{itemize}
+
+\subsection{Evaluation}
+
+Evaluation will be hands-on, starting with personal playtest sessions to assess the LLM's proficiency in guiding the narrative. Metrics for evaluation include:
+
+\begin{itemize}
+\item Narrative consistency with the source material.
+\item Ability to recall and integrate past interactions.
+\item Depth and quality of responses to unforeseen player choices.
+\end{itemize}
+
+A future goal is to develop a LangSmith evaluation set for automated performance assessments, further refining the LLM's capabilities.
+
+\section{Conclusion}
+Computers have long facilitated gaming, but tabletop RPGs present a unique challenge due to their expansive possibility space and player agency. This project bridges the divide between structured computer games and the boundless world of tabletop RPGs using an LLM. Success here implies more than a technological advancement; it indicates the potential for AI to understand and adapt to intricate human behaviors in diverse contexts. This aligns with discussions on AGI alignment, emphasizing AI models that can synergize with human users across multifaceted settings \cite{Anderljung2023FrontierAR}. As highlighted in recent literature, while advanced AI models promise immense benefits, it's essential to proactively manage potential risks to ensure public safety and ethical considerations \cite{Anderljung2023FrontierAR}. Ultimately, this endeavor seeks to integrate advanced AI into complex human activities, broadening horizons for AI-human collaboration.
+
+\section*{Acknowledgments}
+I'd like to thank ChatGPT \cite{ChatGPT2023} for assistance with formatting, editing, and LaTeX support throughout this project.
+
+\bibliographystyle{aaai24.bst}
+\bibliography{aaai24.bib}
+\end{document}
