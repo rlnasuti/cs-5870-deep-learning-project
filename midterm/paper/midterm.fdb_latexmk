@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex midterm"] 1698380862 "midterm.aux" "midterm.bbl" "midterm" 1698380863 0
-  "./aaai23.bib" 1698380860 846 18dbbead67b578c1067afaede98b3b43 ""
-  "./aaai23.bst" 1698355261 30203 4d39232d90d42e4ff308566bef9adc10 ""
-  "midterm.aux" 1698380863 522 89861d2f1c5ba1b0abc6619338aca61b "pdflatex"
+["bibtex midterm"] 1698380862 "midterm.aux" "midterm.bbl" "midterm" 1698383849 0
+  "./aaai23.bib" 1698381205 846 18dbbead67b578c1067afaede98b3b43 ""
+  "./aaai23.bst" 1698381205 30203 4d39232d90d42e4ff308566bef9adc10 ""
+  "midterm.aux" 1698383849 522 89861d2f1c5ba1b0abc6619338aca61b "pdflatex"
   (generated)
   "midterm.bbl"
   "midterm.blg"
   (rewritten before read)
-["pdflatex"] 1698380862 "/Users/robertnasuti/Desktop/Dev/cs-5870-deep-learning-project/midterm/paper/midterm.tex" "midterm.pdf" "midterm" 1698380863 0
-  "/Users/robertnasuti/Desktop/Dev/cs-5870-deep-learning-project/midterm/paper/midterm.tex" 1698380860 19491 468afa824b93c4e0a08013ad0ccd8576 ""
+["pdflatex"] 1698383848 "/Users/robertnasuti/Desktop/Dev/cs-5870-deep-learning-project/midterm/paper/midterm.tex" "midterm.pdf" "midterm" 1698383849 0
+  "/Users/robertnasuti/Desktop/Dev/cs-5870-deep-learning-project/midterm/paper/midterm.tex" 1698383809 19079 0c9153c18581a0cb99ae78d16cc66ab4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -126,11 +126,11 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694366497 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694366473 7883456 9ce616a4abee25201fa85ea09d81a9af ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "aaai23.sty" 1698355261 8731 c3b936377a9c34f707e0f1ebd6b7c32b ""
-  "control_loop.png" 1698376460 126372 95871a1d730faed6cf6db2c2791a125d ""
-  "midterm.aux" 1698380863 522 89861d2f1c5ba1b0abc6619338aca61b "pdflatex"
-  "midterm.bbl" 1698380862 906 f90e8cfc5fbf422dc12ae010f2d5f028 "bibtex midterm"
-  "midterm.tex" 1698380860 19491 468afa824b93c4e0a08013ad0ccd8576 ""
+  "aaai23.sty" 1698381205 8731 c3b936377a9c34f707e0f1ebd6b7c32b ""
+  "control_loop.png" 1698381205 126372 95871a1d730faed6cf6db2c2791a125d ""
+  "midterm.aux" 1698383849 522 89861d2f1c5ba1b0abc6619338aca61b "pdflatex"
+  "midterm.bbl" 1698381205 906 f90e8cfc5fbf422dc12ae010f2d5f028 "bibtex midterm"
+  "midterm.tex" 1698383809 19079 0c9153c18581a0cb99ae78d16cc66ab4 ""
   (generated)
   "midterm.aux"
   "midterm.log"

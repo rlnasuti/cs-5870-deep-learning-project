@@ -103,17 +103,15 @@ A visual representation of this control loop is depicted in Figure \ref{fig:cont
 
 \subsection{Frontend}
 \subsubsection{User Interface (UI)}
-For the frontend, the project utilizes \texttt{Chainlit}, an open-source Python package, chosen for its exceptional suitability in creating a responsive and intuitive UI for the Digital DM. The UI is designed to facilitate smooth player interactions with the system.
+For the frontend, the project utilizes \texttt{Chainlit}, an open-source Python package, chosen for its exceptional suitability in creating a responsive and intuitive UI for the Digital DM.
 
 The UI is designed to facilitate smooth player interactions with the system. It handles the streaming of messages, both from the user and the AI, and manages the display of function call responses. The UI also plays a crucial role in maintaining the conversation's flow, ensuring that players have a seamless gaming experience.
-
-The Chat completions API\footnote{For more information, see: \url{https://platform.openai.com/docs/guides/gpt/chat-completions-api}} is structured to facilitate multi-turn conversations using a list of messages. Each message has a designated role, which can be one of three types: "system", "user", or "assistant". The sequence and roles of these messages are pivotal in guiding the behavior of the LLM and in directing the conversation.
 
 \subsubsection{Context Management}
 To ensure a logical flow in the conversation, it's crucial to maintain a history of prior messages. The assistant lacks inherent memory of past requests; thus, relevant information must be supplied within the conversation history. If a conversation exceeds the model’s token limit, the API will return an error.
 
 \subsubsection{Function Calling in the Chat completions API}
-The latest models in the Chat completions API are designed to describe and call functions, generating a JSON object containing arguments for those functions. This feature enables more structured and dynamic interactions with the assistant.
+The Chat completions API\footnote{For more information, see: \url{https://platform.openai.com/docs/guides/gpt/chat-completions-api}} is structured to facilitate multi-turn conversations using a list of messages. Each message has a designated role, which can be one of four types: "system", "user", "function" or "assistant". The sequence and roles of these messages are pivotal in guiding the behavior of the LLM and in directing the conversation. The latest models in the Chat completions API are designed to describe and call functions, generating a JSON object containing arguments for those functions. This feature enables more structured and dynamic interactions with the assistant.
 
 \subsubsection{Function Integration}
 Functions are embedded into the system message in a syntax familiar to the model. These functions are then counted against the model's context limit and are billed as input tokens. This approach ensures that the assistant can interpret and utilize the functions as intended.
@@ -134,9 +132,6 @@ The procedure involves:
     \item Parsing the JSON in your code and invoking your function using the provided arguments.
     \item Making a subsequent call to the model, incorporating the function response, allowing the model to summarize the results to the user.
 \end{enumerate}
-
-\subsubsection{Note on Function Calling}
-While function calling adds versatility to the assistant, it also introduces potential risks. It's crucial to incorporate user confirmation flows before performing impactful real-world actions, such as sending emails or making online posts, to ensure user intent is accurately captured and acted upon.
 
 \section{Evaluation}
 
