@@ -1,0 +1,40 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Anderljung, Barnhart et~al.(2023)}]{Anderljung2023FrontierAR}
+Anderljung, M.; Barnhart, J.; et~al. 2023.
+\newblock Frontier AI Regulation: {\\} Managing Emerging Risks to Public Safety.
+\newblock \emph{ArXiv}, abs/2307.03718.
+
+\bibitem[{ChatGPT(2023)}]{ChatGPT2023}
+ChatGPT. 2023.
+\newblock Conversations and Assistance in Formatting, Editing, and LaTeX.
+\newblock Available at OpenAI.
+
+\bibitem[{Junprung(2023)}]{Junprung2023ExploringTI}
+Junprung, E. 2023.
+\newblock Exploring the Intersection of Large Language Models and Agent-Based Modeling via Prompt Engineering.
+\newblock \emph{ArXiv}, abs/2308.07411.
+
+\bibitem[{Park, O'Brien et~al.(2023)}]{Park2023GenerativeAI}
+Park, J.~S.; O'Brien, J.~C.; et~al. 2023.
+\newblock Generative Agents: Interactive Simulacra of Human Behavior.
+\newblock \emph{ArXiv}, abs/2304.03442.
+
+\bibitem[{Peinado and Gerv{\'a}s(2007)}]{Peinado2007AutomaticDO}
+Peinado, F.; and Gerv{\'a}s, P. 2007.
+\newblock Automatic Direction of Interactive Storytelling: Formalizing the Game Master Paradigm.
+\newblock In \emph{International Conference on Virtual Storytelling}.
+
+\bibitem[{Perkins, Lee et~al.(2016)}]{Perkins2023CurseOfStrahd}
+Perkins, C.; Lee, A.; et~al. 2016.
+\newblock \emph{Curse of Strahd}.
+\newblock Wizards of the Coast.
+\newblock Lead Designer: Christopher Perkins. Creative Consultants: Tracy and Laura Hickman. This book is based on the 32-page D\&D adventure Ravenloft published in 1983 by TSR, Inc.
+
+\bibitem[{Smed(2014)}]{Smed2014InteractiveSA}
+Smed, J. 2014.
+\newblock Interactive Storytelling: Approaches, Applications, and Aspirations.
+\newblock \emph{Int. J. Virtual Communities Soc. Netw.}, 6: 22--34.
+
+\end{thebibliography}
