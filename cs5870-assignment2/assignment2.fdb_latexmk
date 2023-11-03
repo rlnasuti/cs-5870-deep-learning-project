@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex assignment2"] 1698983360 "assignment2.aux" "assignment2.bbl" "assignment2" 1698983442 0
+["bibtex assignment2"] 1698985184 "assignment2.aux" "assignment2.bbl" "assignment2" 1698985186 0
   "./aaai23.bib" 1698978245 527 6d42b5407e32f41cfa0871ef95ac9ef5 ""
   "./aaai23.bst" 1698975850 30203 4d39232d90d42e4ff308566bef9adc10 ""
-  "assignment2.aux" 1698983442 910 4f3a6e4d87574cc4014230c8f2082103 "pdflatex"
+  "assignment2.aux" 1698985186 984 0aea8ab76c12d92d871ab8bff8ec99d4 "pdflatex"
   (generated)
   "assignment2.bbl"
   "assignment2.blg"
   (rewritten before read)
-["pdflatex"] 1698983442 "/Users/robertnasuti/Desktop/Dev/cs-5870-deep-learning-project/cs5870-assignment2/assignment2.tex" "assignment2.pdf" "assignment2" 1698983442 0
-  "/Users/robertnasuti/Desktop/Dev/cs-5870-deep-learning-project/cs5870-assignment2/assignment2.tex" 1698983441 18065 13562cb192aea164581ddc4b3323fa73 ""
+["pdflatex"] 1698985185 "/Users/robertnasuti/Desktop/Dev/cs-5870-deep-learning-project/cs5870-assignment2/assignment2.tex" "assignment2.pdf" "assignment2" 1698985186 0
+  "/Users/robertnasuti/Desktop/Dev/cs-5870-deep-learning-project/cs5870-assignment2/assignment2.tex" 1698985182 16238 7750e80b754ff75da1c258516e7bf37d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -134,14 +134,16 @@
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694366473 7883456 9ce616a4abee25201fa85ea09d81a9af ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "aaai23.sty" 1698975850 8731 c3b936377a9c34f707e0f1ebd6b7c32b ""
-  "assignment2.aux" 1698983442 910 4f3a6e4d87574cc4014230c8f2082103 "pdflatex"
-  "assignment2.bbl" 1698983360 561 7498aeb52f982528a60b24475b8b6579 "bibtex assignment2"
-  "assignment2.tex" 1698983441 18065 13562cb192aea164581ddc4b3323fa73 ""
+  "assignment2.aux" 1698985186 984 0aea8ab76c12d92d871ab8bff8ec99d4 "pdflatex"
+  "assignment2.bbl" 1698985185 561 7498aeb52f982528a60b24475b8b6579 "bibtex assignment2"
+  "assignment2.tex" 1698985182 16238 7750e80b754ff75da1c258516e7bf37d ""
   "custom_relu_history_optimal.png" 1698983269 40628 41c6b6059d5bce8c0e9913d80b99368e ""
+  "failed_adam.png" 1698985141 34599 a34a45e528a7671c5d6d854a88ef3009 ""
   "iris_relu_custom.png" 1698980240 45931 351ac7570032c0da86900888b1a4c28d ""
   "mnist_relu_custom.png" 1698980244 44826 4ac6c12b82f5f348782cd2d58a2b6fd8 ""
   "mnist_relu_keras_tf.png" 1698981623 48127 a02a7e81271b95e142ea849d8b65994e ""
   "momentum_grid_search.png" 1698982153 45213 c3991b328cbe7068aaa58a4b66fe8066 ""
+  "successful_adam.png" 1698985148 49175 05a1352abffbbba967ad6939c485a455 ""
   (generated)
   "assignment2.aux"
   "assignment2.log"

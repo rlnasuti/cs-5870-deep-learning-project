@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.10)  2 NOV 2023 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.10)  2 NOV 2023 22:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -341,12 +341,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 25
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 1648) in paragraph at lines 28--29
-\OT1/ptm/m/n/9 con-struct-ing a two-layer dense ar-ti-fi-cial neu-ral net-work
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 55--56
+Underfull \hbox (badness 1057) in paragraph at lines 45--46
 \OT1/ptm/m/n/10 an in-put layer, one hid-den layer, and an out-put layer.
  []
 
@@ -358,69 +353,74 @@ Underfull \hbox (badness 1057) in paragraph at lines 55--56
 <mnist_relu_custom.png, id=11, 521.7894pt x 397.485pt>
 File: mnist_relu_custom.png Graphic file (type png)
 <use mnist_relu_custom.png>
-Package pdftex.def Info: mnist_relu_custom.png  used on input line 74.
+Package pdftex.def Info: mnist_relu_custom.png  used on input line 64.
 (pdftex.def)             Requested size: 191.51622pt x 145.8905pt.
 <mnist_relu_keras_tf.png, id=13, 521.7894pt x 397.485pt>
 File: mnist_relu_keras_tf.png Graphic file (type png)
 <use mnist_relu_keras_tf.png>
-Package pdftex.def Info: mnist_relu_keras_tf.png  used on input line 81.
+Package pdftex.def Info: mnist_relu_keras_tf.png  used on input line 71.
 (pdftex.def)             Requested size: 191.51622pt x 145.8905pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <iris_relu_custom.png, id=14, 521.7894pt x 397.485pt>
 File: iris_relu_custom.png Graphic file (type png)
 <use iris_relu_custom.png>
-Package pdftex.def Info: iris_relu_custom.png  used on input line 91.
+Package pdftex.def Info: iris_relu_custom.png  used on input line 81.
 (pdftex.def)             Requested size: 191.51622pt x 145.8905pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 99.
+(Font)              <7> on input line 89.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 99.
-[2 <./mnist_relu_custom.png> <./mnist_relu_keras_tf.png>]
-<momentum_grid_search.png, id=21, 521.7894pt x 397.485pt>
+(Font)              <5> on input line 89.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<momentum_grid_search.png, id=15, 521.7894pt x 397.485pt>
 File: momentum_grid_search.png Graphic file (type png)
 <use momentum_grid_search.png>
-Package pdftex.def Info: momentum_grid_search.png  used on input line 136.
+Package pdftex.def Info: momentum_grid_search.png  used on input line 126.
 (pdftex.def)             Requested size: 191.51622pt x 145.8905pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<custom_relu_history_optimal.png, id=22, 521.7894pt x 397.485pt>
+<custom_relu_history_optimal.png, id=16, 521.7894pt x 397.485pt>
 File: custom_relu_history_optimal.png Graphic file (type png)
 <use custom_relu_history_optimal.png>
-Package pdftex.def Info: custom_relu_history_optimal.png  used on input line 149.
+Package pdftex.def Info: custom_relu_history_optimal.png  used on input line 139.
 (pdftex.def)             Requested size: 191.51622pt x 145.8905pt.
+[2 <./mnist_relu_custom.png> <./mnist_relu_keras_tf.png> <./iris_relu_custom.png>]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 1383) has occurred while \output is active []
-
- [3 <./iris_relu_custom.png> <./momentum_grid_search.png> <./custom_relu_history_optimal.png>]
-Underfull \hbox (badness 1418) in paragraph at lines 169--170
-[]\OT1/ptm/m/n/10 Furthermore, the sec-ond mo-ment es-ti-mate's adap-tive
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- (./assignment2.bbl) [4] (./assignment2.aux) ) 
+<successful_adam.png, id=28, 521.7894pt x 397.485pt>
+File: successful_adam.png Graphic file (type png)
+<use successful_adam.png>
+Package pdftex.def Info: successful_adam.png  used on input line 157.
+(pdftex.def)             Requested size: 191.51622pt x 145.8905pt.
+[3 <./momentum_grid_search.png> <./custom_relu_history_optimal.png> <./successful_adam.png>]
+<failed_adam.png, id=39, 521.7894pt x 397.485pt>
+File: failed_adam.png Graphic file (type png)
+<use failed_adam.png>
+Package pdftex.def Info: failed_adam.png  used on input line 166.
+(pdftex.def)             Requested size: 191.51622pt x 145.8905pt.
+ (./assignment2.bbl) [4 <./failed_adam.png>] (./assignment2.aux) ) 
 Here is how much of TeX's memory you used:
- 13929 strings out of 476025
- 287085 string characters out of 5790017
- 1867388 words of memory out of 5000000
- 34152 multiletter control sequences out of 15000+600000
+ 13945 strings out of 476025
+ 287423 string characters out of 5790017
+ 1868388 words of memory out of 5000000
+ 34166 multiletter control sequences out of 15000+600000
  527303 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,89p,989b,283s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,89p,1392b,283s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on assignment2.pdf (4 pages, 320857 bytes).
+Output written on assignment2.pdf (4 pages, 383709 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

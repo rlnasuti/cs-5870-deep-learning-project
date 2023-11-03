@@ -472,6 +472,8 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./mnist_relu_custom.png
 INPUT ./mnist_relu_custom.png
 INPUT mnist_relu_custom.png
@@ -487,8 +489,6 @@ INPUT ./iris_relu_custom.png
 INPUT iris_relu_custom.png
 INPUT ./iris_relu_custom.png
 INPUT ./iris_relu_custom.png
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
@@ -505,6 +505,16 @@ INPUT ./custom_relu_history_optimal.png
 INPUT custom_relu_history_optimal.png
 INPUT ./custom_relu_history_optimal.png
 INPUT ./custom_relu_history_optimal.png
+INPUT ./successful_adam.png
+INPUT ./successful_adam.png
+INPUT successful_adam.png
+INPUT ./successful_adam.png
+INPUT ./successful_adam.png
+INPUT ./failed_adam.png
+INPUT ./failed_adam.png
+INPUT failed_adam.png
+INPUT ./failed_adam.png
+INPUT ./failed_adam.png
 INPUT ./assignment2.bbl
 INPUT assignment2.bbl
 INPUT ./assignment2.bbl

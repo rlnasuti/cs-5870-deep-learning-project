@@ -25,28 +25,18 @@ rnasuti@uccs.edu}
 \maketitle
 
 \begin{abstract}
-This paper delineates the process and insights derived from constructing a two-layer dense artificial neural network (ANN) without the aid of advanced neural network libraries. The experimental odyssey begins with a manual implementation of core neural network elements such as feedforward mechanisms, activation functions, and backpropagation utilizing Stochastic Gradient Descent (SGD) on MNIST and Iris datasets. We unearthed the criticality of learning rate selection, particularly when devoid of optimization heuristics; a sub-optimal choice led to instability and poor network performance. Especially with the ReLU activation function, we encountered the notorious "dying ReLU" problem, which necessitated precise tuning of learning rates and initialization methods. Initial experiments exposed a high variance in outcomes, suggestive of entrapment in local optima.
-    
-The incorporation of momentum in SGD significantly mitigated this issue, stabilizing validation accuracy but still demanding a fine-tuned balance with the learning rate, achieved through an extensive grid search. Further refinement was realized by introducing AdaGrad's history variable, catapulting the network's accuracy. However, the enhancement brought forth by RMSProp's tempered history was not as pronounced, potentially due to already ameliorated gradient issues. Finally, the intricate implementation of the Adam optimizer—demanding meticulous parameter tuning—did not undergo extensive optimization but still showcased the potential for improved performance.
-    
-This compendium articulates the intricacies and empirical outcomes of manual ANN construction, providing insights into the nuanced dynamics of network behavior and optimization beyond the abstractions of high-level frameworks.
+    In this study, we detail the development and performance evaluation of a two-layer dense artificial neural network (ANN), constructed from the ground up without the use of advanced neural network libraries. Our hands-on approach to the core neural network mechanisms—comprising feedforward, activation functions, and backpropagation—highlights the pivotal role of hyperparameter tuning and optimization strategies. We demonstrate the significant impact of learning rate selection and momentum on network stability and performance, using the MNIST and Iris datasets as benchmarks. The findings underscore the trade-offs and potential of manual ANN development in understanding the nuanced dynamics of neural network behavior.
 \end{abstract}
     
 
 \section{Introduction}
 \label{sec:introduction}
 
-In the advent of deep learning, artificial neural networks (ANNs) have established a stronghold as powerful tools for pattern recognition, transcending beyond the scope of traditional machine learning. Among various architectures, dense feedforward neural networks serve as fundamental building blocks, often hidden behind the abstraction layers of sophisticated deep learning libraries. The objective of this paper is to demystify the underlying mechanics of ANNs by constructing a two-layer dense neural network from scratch, using no specialized ANN libraries for the core operations, thereby providing an educational insight into their inner workings.
+The advent of deep learning has cemented artificial neural networks (ANNs) as essential tools for pattern recognition, outperforming traditional machine learning methods. Dense feedforward neural networks form the core of many sophisticated models, yet they often remain enigmatic due to the complexity and the abstraction provided by high-level frameworks. This paper demystifies the mechanics of ANNs through the manual construction of a two-layer dense network, thereby elucidating the foundational principles and challenges of neural network design and optimization.
 
-The significance of such an endeavor is multifold. Primarily, it serves as an exploratory platform for understanding the nuances of network training, particularly in the manual tuning of hyperparameters and the implementation of gradient-based optimization techniques. Furthermore, by restricting the use of high-level libraries, one gains an appreciation for the complexities involved in designing efficient, scalable, and robust neural network architectures.
+By foregoing the convenience of established libraries, this work provides a granular perspective on the training process, from hyperparameter tuning to the application of optimization techniques. The MNIST and Iris datasets serve as the proving grounds for our network, chosen for their ubiquity in the machine learning community and their capacity to benchmark the performance of the implemented architecture. 
 
-In this paper, we detail the construction and experimental evaluation of a two-layer dense neural network, with an emphasis on the foundational elements of ANN operations: the forward pass, activation functions, and the backpropagation algorithm. The learning dynamics of the network are scrutinized under the lens of Stochastic Gradient Descent (SGD) with a particular focus on the implementation and impact of various optimization enhancements such as momentum and adaptive learning rates.
-
-The network is initially trained and tested on the MNIST dataset—a classical benchmark in the field of machine learning—and further validated on the Iris dataset to ensure its general applicability to different input-output configurations. Our findings reveal the sensitive nature of learning rate selection, the phenomenon of "dying ReLU" in networks employing the ReLU activation function, and the variability of performance due to local minima.
-
-Subsequent enhancements to the SGD algorithm, such as the incorporation of momentum and the AdaGrad history variable, showcase significant improvements in network performance, with a marked increase in validation accuracy and robustness to initial conditions. The introduction of RMSProp's tempered history variable and the Adam optimizer's amalgamation of these techniques further underscore the critical role of sophisticated optimization algorithms in modern ANN training.
-
-We conclude with a comparative analysis between our scratch-built ANN and a similar network constructed using the high-level Keras library with a Tensorflow backend. The juxtaposition of these two approaches serves not only to validate our implementation but also to offer insights into the trade-offs between building custom neural network frameworks and employing off-the-shelf deep learning libraries.
+Our in-depth exploration contributes a tangible understanding of the manual tuning required for neural network operation, offering insights that are often occluded by the automation of modern frameworks. This study aims to equip researchers and practitioners with a deeper comprehension of the inner workings of ANNs and the optimization landscapes they navigate.
 
 \section{Approach and Results}
 
@@ -56,7 +46,7 @@ Our implementation of a foundational two-layer dense neural network demonstrates
 
 \subsection{Activation Functions}
 \label{subsec:activationfunctions}
-The implementation of the sigmoid, tanh, and ReLU activation functions within our network architecture is crucial for the adaptability and performance of the model. Our initial foray with the ReLU function encountered the "dying ReLU" phenomenon, which was mitigated by adopting He initialization for the weights—a strategy that preserves the gradient flow, especially beneficial for deep learning architectures. This approach, confirmed via unit testing, not only improves the stability of the model but also serves as a practical solution to a common problem faced in neural network training.
+The implementation of the sigmoid, tanh, and ReLU activation functions within our network architecture is crucial for the adaptability and performance of the model. Our initial foray with the ReLU function encountered the "dying ReLU" phenomenon, which was mitigated by adopting He initialization for the weights—a strategy that preserves the gradient flow, especially beneficial for deep learning architectures. This approach, confirmed via unit testing, not only improves the stability of the model but also serves as a practical solution to a common problem faced in neural network training. One other noteworthy problem encountered when implementing these activation functions is that the tanh activation function can suffer from numerical instability when its input is large in magnitude, leading to overflow errors in the computation of the exponential function. To mitigate this, we apply clipping to the input values, bounding them within a range where the exponential function does not overflow. In our implementation, we constrain the inputs to the tanh function between -20 and 20. This range is wide enough to accommodate the majority of input values without significant loss of information, as the output of tanh saturates to -1 or 1 well within these bounds.
 
 \subsection{Implement Backpropagation}
 \label{subsec:backpropagation}
@@ -160,17 +150,30 @@ Tempering the history variable as per RMSProp's strategy did not produce a notab
 
 The Adam optimizer is a sophisticated algorithm that combines the ideas of momentum and adaptive learning rates to facilitate efficient optimization. It captures the benefits of both the momentum method, through the first moment estimate (\(\beta_1\)), and the RMSprop optimizer, by adjusting learning rates with the second moment estimate (\(\beta_2\)). These moment estimates are crucial in providing a balance between the momentum of past gradients and the scaling based on recent gradient magnitudes.
 
-In the context of our multi-layer perceptron (MLP) implementation, the default hyperparameter values for Adam were set to \(\beta_1=0.9\) and \(\beta_2=0.999\), in line with the literature's standard recommendations. While the constraints of our project did not allow for a thorough optimization of these hyperparameters, the preliminary implementation with these defaults yielded a notable improvement in convergence speed over the basic gradient descent approach.
+In the context of our multi-layer perceptron (MLP) implementation, the default hyperparameter values for Adam were set to \(\beta_1=0.9\) and \(\beta_2=0.999\), in line with the literature's standard recommendations. While the constraints of our project did not allow for a thorough optimization of these hyperparameters, the preliminary implementation with these defaults yielded a notable improvement in convergence speed over the basic gradient descent approach, as illustrated in Figure \ref{fig:successful_adam}.
 
-One critical aspect of the Adam optimizer is the bias correction mechanism, which compensates for the zero initialization of the moment vectors. The correction factors \( (1 - \beta_1^t) \) and \( (1 - \beta_2^t) \), with \( t \) being the current time step (epoch number), adjust the moment estimates to better reflect the actual values. A small oversight during implementation led to the initial `t` value being set to 0, which caused a division by zero and resulted in the network failing to converge. This subtle bug was rectified by setting the initial `t` value to 1, allowing the bias correction to function properly from the start of training.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{successful_adam.png}
+    \caption{Convergence of the network using the Adam optimizer after correcting the bias initialization issue.}
+    \label{fig:successful_adam}
+\end{figure}
 
-This correction is particularly vital in the early stages of training where the momentum terms are more susceptible to being skewed due to the zero initialization. By accounting for this initial bias, the optimizer can more accurately update the weights, especially during the first few iterations.
+However, our initial implementation encountered a significant setback due to a bug in the bias correction mechanism. The Adam optimizer corrects for the zero initialization of the moment vectors with correction factors \( (1 - \beta_1^t) \) and \( (1 - \beta_2^t) \), where \( t \) denotes the current time step (epoch number). Incorrectly initializing `t` to 0 led to a division by zero, preventing network convergence, as depicted in Figure \ref{fig:failed_adam}.
 
-Furthermore, the second moment estimate's adaptive learning rate ensures that the steps taken towards the minimum of the loss function are scaled appropriately, accounting for the varying gradients across different parameters. This characteristic is instrumental in dealing with sparse gradients and in non-stationary objectives, where some parameters may receive very little gradient information.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{failed_adam.png}
+    \caption{Failed convergence due to the initial bias correction bug in the Adam optimizer implementation.}
+    \label{fig:failed_adam}
+\end{figure}
 
-The correction for this implementation bug led to immediate improvements, with the network beginning to converge as expected. This experience highlights the sensitivity of neural network training to even minor implementation details and the importance of thorough debugging and testing.
+Correcting the initialization of `t` to 1 allowed the bias correction to operate correctly from the beginning of training. This modification was critical, especially in the early stages of training, and enabled the optimizer to update the weights accurately, leading to the successful training outcome shown in Figure \ref{fig:successful_adam}.
 
-In summary, our findings corroborate the literature on the effectiveness of the Adam optimizer. Its dynamic adjustment of learning rates coupled with momentum-based updates provides a strong foundation for training deep neural networks. While we observed significant benefits with default hyperparameter settings, we anticipate that a dedicated hyperparameter search could unlock further enhancements in the network's performance.
+The second moment estimate's adaptive learning rate is instrumental in dealing with sparse gradients and non-stationary objectives, allowing the optimizer to adjust the learning rate for each parameter based on its gradient history. This feature is highlighted in our corrected implementation, where the network's convergence demonstrates the Adam optimizer's robustness to initial conditions and gradient variance.
+
+In summary, our findings validate the literature on the effectiveness of the Adam optimizer. Its dynamic adjustment of learning rates coupled with momentum-based updates provides a strong foundation for training deep neural networks. While we observed significant benefits with default hyperparameter settings, we anticipate that a dedicated hyperparameter search could unlock further enhancements in the network's performance.
+
 
 \section{Conclusions}
 \label{sec:conclusions}
